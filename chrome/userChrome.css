@@ -19,7 +19,7 @@
 
 :root {
 	--tab-background: #f1c4d28f !important;
-	--search-select-color: rgb(127, 187, 255);
+	--search-select-color: rgb(127, 187, 255) !important;
 }
 
 .urlbarView {
@@ -70,7 +70,7 @@
 }
 
 .bookmark-item .toolbarbutton-icon {
-	display: none;
+	display: none !important;
 }
 
 #context-searchselect {
