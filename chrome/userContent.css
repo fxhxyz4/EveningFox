@@ -18,7 +18,7 @@
 */
 
 :root {
-	--scroll-color: rgb(0, 225, 255);
+	--scroll-color: rgb(0, 225, 255) !important;
 }
 
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
@@ -46,7 +46,7 @@
 
 	.search-inner-wrapper {
 		border: 1px solid var(--scroll-color) !important;
-		border-radius: 14px;
+		border-radius: 14px !important;
 	}
 
 	body::before {
