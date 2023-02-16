@@ -1,5 +1,5 @@
 #
 
-### 🎨browser-theme for (Chrome / Firefox / Edge / OperaGX / Brave) ie Not supported
+### 🎨browser-theme for (Chrome / Firefox / Edge / OperaGX / Brave / Safari) ie Not supported
 
 #
