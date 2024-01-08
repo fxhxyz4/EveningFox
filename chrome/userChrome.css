@@ -1,0 +1,97 @@
+/*
+
+=====================================================
+=====================================================
+
+
+	███████╗██╗  ██╗██╗  ██╗██╗  ██╗██╗   ██╗███████╗
+	██╔════╝╚██╗██╔╝██║  ██║╚██╗██╔╝╚██╗ ██╔╝╚══███╔╝
+	█████╗   ╚███╔╝ ███████║ ╚███╔╝  ╚████╔╝   ███╔╝
+	██╔══╝   ██╔██╗ ██╔══██║ ██╔██╗   ╚██╔╝   ███╔╝
+	██║     ██╔╝ ██╗██║  ██║██╔╝ ██╗   ██║   ███████╗
+	╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝
+
+
+=====================================================
+=====================================================
+
+*/
+
+:root {
+	--tab-background: #f1c4d28f !important;
+	--search-select-color: rgb(127, 187, 255) !important;
+}
+
+.urlbarView {
+	display: none !important;
+}
+
+#tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[multiselected='true'],
+#tabbrowser-tabs:not([movingtab]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab > .tab-stack > .tab-background[selected='true'] {
+	background-color: var(--tab-background) !important;
+	border-radius: 7px !important;
+}
+
+#navigator-toolbox {
+	background-color: var(--tab-background) !important;
+	border: 1px solid white !important;
+	border-radius: 7px !important;
+}
+
+.tab-close-button {
+	background: none !important;
+	border: none !important;
+}
+
+#urlbar-input-container {
+	background: none !important;
+}
+
+#urlbar {
+	box-shadow: none !important;
+	background: none !important;
+	border: none !important;
+}
+
+#urlbar[focused='true'] {
+	box-shadow: none !important;
+	background: none !important;
+	border: none !important;
+}
+
+#urlbar-background {
+	background: none !important;
+	box-shadow: none !important;
+	border: none !important;
+}
+
+#navigator-toolbox {
+	border: none !important;
+}
+
+.bookmark-item .toolbarbutton-icon {
+	display: none !important;
+}
+
+#context-searchselect {
+	background-color: var(--search-select-color) !important;
+}
+
+#context-pocket,
+#context-selectall,
+#context-inspect-a11y,
+#context-sendlinktodevice,
+#context-bookmarklink,
+#context-savelinktopocket,
+#context-sendlinktodevice,
+#context-print-selection,
+#context_sendTabToDevice,
+#context_reopenInContainer {
+	display: none !important;
+}
+
+.urlbar-icon,
+#userContext-indicator,
+#userContext-label {
+	display: none !important;
+}

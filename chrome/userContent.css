@@ -1,0 +1,75 @@
+/*
+
+=====================================================
+=====================================================
+
+
+	███████╗██╗  ██╗██╗  ██╗██╗  ██╗██╗   ██╗███████╗
+	██╔════╝╚██╗██╔╝██║  ██║╚██╗██╔╝╚██╗ ██╔╝╚══███╔╝
+	█████╗   ╚███╔╝ ███████║ ╚███╔╝  ╚████╔╝   ███╔╝
+	██╔══╝   ██╔██╗ ██╔══██║ ██╔██╗   ╚██╔╝   ███╔╝
+	██║     ██╔╝ ██╗██║  ██║██╔╝ ██╗   ██║   ███████╗
+	╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝
+
+
+=====================================================
+=====================================================
+
+*/
+
+:root {
+	--scroll-color: rgb(0, 225, 255) !important;
+}
+
+@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
+	.click-target-container * {
+		display: none !important;
+	}
+	.top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+		background: none !important;
+	}
+
+	.search-inner-wrapper,
+	.tile,
+	.icon-wrapper,
+	.top-site-icon {
+		background-color: #ffffff00 !important;
+	}
+
+	.tile {
+		border: 1px solid var(--scroll-color) !important;
+	}
+
+	.search-inner-wrapper * {
+		background-color: #ffffff00 !important;
+	}
+
+	.search-inner-wrapper {
+		border: 1px solid var(--scroll-color) !important;
+		border-radius: 14px !important;
+	}
+
+	body::before {
+		content: '';
+		z-index: -1;
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: no-repeat url(./background/background.gif) center;
+		background-size: cover;
+	}
+}
+
+:root {
+	scrollbar-width: thin !important;
+	scrollbar-color: var(--scroll-color) transparent !important;
+}
+
+@-moz-document url(about:blank) {
+	:root {
+		scrollbar-width: thin !important;
+		scrollbar-color: var(--scroll-color) transparent !important;
+	}
+}
