@@ -15,7 +15,7 @@
 
 ## > change background
 
-- Open profile directory > chrome > background > change this file (formats: jpg, gif).
+- Open profile directory > chrome > background > change this file (formats: jpg, gif, png, mp4).
 
 - Restart.
 
