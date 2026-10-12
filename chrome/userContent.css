@@ -17,38 +17,20 @@
 
 */
 
+/* palette, thin accent scrollbars on every page */
 :root {
-	--scroll-color: rgb(0, 225, 255) !important;
+	--ef-accent: rgb(0, 225, 255);
+	--ef-pink: #f1c4d2;
+	--ef-glass: rgba(14, 10, 32, 0.38);
+	--ef-glow: rgba(0, 225, 255, 0.35);
+	--ef-radius: 14px;
+
+	scrollbar-width: thin !important;
+	scrollbar-color: var(--ef-accent) transparent !important;
 }
 
+/* new tab, home and private window */
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
-	.click-target-container * {
-		display: none !important;
-	}
-	.top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
-		background: none !important;
-	}
-
-	.search-inner-wrapper,
-	.tile,
-	.icon-wrapper,
-	.top-site-icon {
-		background-color: #ffffff00 !important;
-	}
-
-	.tile {
-		border: 1px solid var(--scroll-color) !important;
-	}
-
-	.search-inner-wrapper * {
-		background-color: #ffffff00 !important;
-	}
-
-	.search-inner-wrapper {
-		border: 1px solid var(--scroll-color) !important;
-		border-radius: 14px !important;
-	}
-
 	body::before {
 		content: '';
 		z-index: -1;
@@ -57,19 +39,42 @@
 		position: fixed;
 		top: 0;
 		left: 0;
+		pointer-events: none;
 		background: no-repeat url(./background/background.gif) center;
 		background-size: cover;
 	}
-}
 
-:root {
-	scrollbar-width: thin !important;
-	scrollbar-color: var(--scroll-color) transparent !important;
-}
+	.click-target-container * {
+		display: none !important;
+	}
 
-@-moz-document url(about:blank) {
-	:root {
-		scrollbar-width: thin !important;
-		scrollbar-color: var(--scroll-color) transparent !important;
+	.top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+		background: none !important;
+	}
+
+	.icon-wrapper,
+	.top-site-icon,
+	.search-inner-wrapper * {
+		background-color: transparent !important;
+	}
+
+	/* frosted glass over the animated background */
+	.search-inner-wrapper,
+	.tile {
+		background-color: var(--ef-glass) !important;
+		backdrop-filter: blur(10px) !important;
+		border: 1px solid var(--ef-accent) !important;
+		border-radius: var(--ef-radius) !important;
+	}
+
+	.search-inner-wrapper:focus-within,
+	.top-site-outer:is(.active, :focus, :hover) .tile {
+		border-color: var(--ef-pink) !important;
+		box-shadow: 0 0 16px var(--ef-glow) !important;
+	}
+
+	.top-site-outer .title,
+	.top-site-outer .title span {
+		text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
 	}
 }
