@@ -1,0 +1,148 @@
+/*
+
+=====================================================
+=====================================================
+
+
+   ███████╗██╗  ██╗██╗  ██╗██╗  ██╗██╗   ██╗███████╗
+   ██╔════╝╚██╗██╔╝██║  ██║╚██╗██╔╝╚██╗ ██╔╝╚══███╔╝
+   █████╗   ╚███╔╝ ███████║ ╚███╔╝  ╚████╔╝   ███╔╝
+   ██╔══╝   ██╔██╗ ██╔══██║ ██╔██╗   ╚██╔╝   ███╔╝
+   ██║     ██╔╝ ██╗██║  ██║██╔╝ ██╗   ██║   ███████╗
+   ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚══════╝
+
+
+=====================================================
+=====================================================
+
+*/
+
+:root {
+	--ef-accent: rgb(0, 225, 255);
+	--ef-pink: #f1c4d2;
+	--ef-glass: rgba(14, 10, 32, 0.38);
+	--ef-glow: rgba(0, 225, 255, 0.35);
+	--ef-radius: 14px;
+
+	scrollbar-width: thin !important;
+	scrollbar-color: var(--ef-accent) transparent !important;
+}
+
+@-moz-document url(about:home),
+               url(about:newtab),
+               url(about:privatebrowsing) {
+	html {
+		background-color: #0e0a20 !important;
+	}
+
+	body {
+		image-rendering: pixelated;
+		background-color: #0e0a20 !important;
+		background-image: url('./background-neon.gif') !important;
+		background-position: center center !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		background-attachment: fixed !important;
+	}
+
+	body::before {
+		content: none !important;
+	}
+
+	.nova-outer-wrapper,
+	.container.nova-enabled,
+	.outer-wrapper {
+		background-color: transparent !important;
+		background-image: none !important;
+	}
+
+	.nova-outer-wrapper.stuck-search::before {
+		background-color: rgba(14, 10, 32, 0.85) !important;
+	}
+
+	.logo-and-wordmark,
+	.logo-and-wordmark-wrapper {
+		display: none !important;
+	}
+
+	.click-target-container * {
+		display: none !important;
+	}
+
+	.top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+		background: transparent !important;
+	}
+
+	.icon-wrapper,
+	.top-site-icon {
+		background-color: transparent !important;
+	}
+
+	.search-wrapper .search-inner-wrapper {
+		background: transparent !important;
+		border: none !important;
+		border-radius: var(--ef-radius) !important;
+		outline: none !important;
+		box-shadow: none !important;
+	}
+
+	.search-inner-wrapper content-search-handoff-ui {
+		--content-search-handoff-ui-background-color: var(--ef-glass) !important;
+		--content-search-handoff-ui-unfocused-border-color: var(--ef-accent) !important;
+		--content-search-handoff-ui-fakefocus-border-color: var(--ef-pink) !important;
+		--content-search-handoff-ui-fakefocus-box-shadow-inner: var(--ef-glow) !important;
+		--content-search-handoff-ui-fakefocus-box-shadow-outer: transparent !important;
+		--content-search-handoff-ui-border-width: 1px !important;
+		--content-search-handoff-ui-border-radius: var(--ef-radius) !important;
+
+		border-radius: var(--ef-radius) !important;
+		backdrop-filter: blur(10px) !important;
+	}
+
+	.search-inner-wrapper moz-urlbar[in-page] {
+		--urlbar-background-color: var(--ef-glass) !important;
+		--urlbar-background-color-focus: var(--ef-glass) !important;
+		--urlbar-background-border: 1px solid var(--ef-accent) !important;
+		--urlbar-background-border-focused: 1px solid var(--ef-pink) !important;
+		--urlbar-background-border-open: 1px solid var(--ef-accent) !important;
+		--urlbar-background-border-radius: var(--ef-radius) !important;
+		--urlbar-border-radius: var(--ef-radius) !important;
+		--urlbar-background-overhang-open: 0px !important;
+		--urlbar-background-box-shadow-open: none !important;
+
+		border-radius: var(--ef-radius) !important;
+		backdrop-filter: blur(10px) !important;
+	}
+
+	.search-inner-wrapper moz-urlbar[in-page] > .urlbar-background {
+		background-color: var(--ef-glass) !important;
+		border: 1px solid var(--ef-accent) !important;
+		border-radius: var(--ef-radius) !important;
+		box-shadow: none !important;
+		clip-path: none !important;
+	}
+
+	.search-inner-wrapper moz-urlbar[in-page][focused] > .urlbar-background {
+		border-color: var(--ef-pink) !important;
+		box-shadow: 0 0 16px var(--ef-glow) !important;
+	}
+
+	.top-site-outer .tile {
+		background-color: var(--ef-glass) !important;
+		background-image: none !important;
+		backdrop-filter: blur(10px) !important;
+		border: 1px solid var(--ef-accent) !important;
+		border-radius: var(--ef-radius) !important;
+		box-shadow: none !important;
+	}
+
+	.top-site-outer:is(.active, :focus, :hover) .tile {
+		border-color: var(--ef-pink) !important;
+		box-shadow: 0 0 16px var(--ef-glow) !important;
+	}
+
+	.top-site-outer .title,
+	.top-site-outer .title span {
+		text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
+	}
+}

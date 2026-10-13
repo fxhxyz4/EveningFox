@@ -1,0 +1,247 @@
+/*
+
+=====================================================
+=====================================================
+
+
+   ███████╗██╗  ██╗██╗  ██╗██╗  ██╗██╗   ██╗███████╗
+   ██╔════╝╚██╗██╔╝██║  ██║╚██╗██╔╝╚██╗ ██╔╝╚══███╔╝
+   █████╗   ╚███╔╝ ███████║ ╚███╔╝  ╚████╔╝   ███╔╝
+   ██╔══╝   ██╔██╗ ██╔══██║ ██╔██╗   ╚██╔╝   ███╔╝
+   ██║     ██╔╝ ██╗██║  ██║██╔╝ ██╗   ██║   ███████╗
+   ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚══════╝
+
+
+=====================================================
+=====================================================
+
+*/
+
+:root {
+	--ef-base: #22263b;
+	--ef-toolbar: #2c304d;
+	--ef-field: #191e33;
+	--ef-field-focus: #202640;
+
+	--ef-accent: rgb(0, 225, 255);
+	--ef-select: rgb(127, 187, 255);
+
+	--ef-tab-selected: linear-gradient(125deg, #b49bff 0%, #91b7ff 100%);
+	--ef-tab-hover: rgba(171, 169, 243, 0.2);
+
+	--ef-text: #e9ecff;
+	--ef-text-muted: #aebad9;
+	--ef-tab-text: #1d2037;
+	--ef-border: rgba(171, 184, 243, 0.22);
+
+	--ef-radius: 10px;
+
+	--toolbox-background-color: var(--ef-base) !important;
+	--toolbar-background-color: var(--ef-toolbar) !important;
+	--toolbar-color: var(--ef-text) !important;
+
+	--toolbarbutton-hover-background: rgba(171, 169, 243, 0.18) !important;
+	--toolbarbutton-active-background: rgba(171, 169, 243, 0.3) !important;
+	--toolbarbutton-border-radius: var(--ef-radius) !important;
+
+	--tab-border-radius: var(--ef-radius) !important;
+	--tab-text-color-selected: var(--ef-tab-text) !important;
+}
+
+#navigator-toolbox {
+	background-color: var(--ef-base) !important;
+	background-image: none !important;
+	border: none !important;
+	border-radius: 12px 12px 0 0 !important;
+	box-shadow: none !important;
+}
+
+#TabsToolbar {
+	background: transparent !important;
+	background-image: none !important;
+	border: none !important;
+	box-shadow: none !important;
+	color: var(--ef-text) !important;
+}
+
+#nav-bar,
+#PersonalToolbar {
+	background: var(--ef-toolbar) !important;
+	background-image: none !important;
+	border: none !important;
+	box-shadow: none !important;
+	color: var(--ef-text) !important;
+}
+
+.tabbrowser-tab .tab-background {
+	border-radius: var(--ef-radius) !important;
+	background-image: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	border: none !important;
+}
+
+.tabbrowser-tab .tab-content {
+	color: var(--ef-text) !important;
+}
+
+.tabbrowser-tab .tab-label {
+	color: inherit !important;
+	opacity: 1 !important;
+	text-shadow: none !important;
+}
+
+.tabbrowser-tab:is([selected], [visually-selected], [multiselected]) .tab-background {
+	background: var(--ef-tab-selected) !important;
+	border-radius: var(--ef-radius) !important;
+	border: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+}
+
+.tabbrowser-tab:is([selected], [visually-selected], [multiselected]) .tab-content,
+.tabbrowser-tab:is([selected], [visually-selected], [multiselected]) .tab-label {
+	color: var(--ef-tab-text) !important;
+	opacity: 1 !important;
+}
+
+.tabbrowser-tab:not([selected], [visually-selected], [multiselected]):hover .tab-background {
+	background: var(--ef-tab-hover) !important;
+	border-radius: var(--ef-radius) !important;
+}
+
+.tabbrowser-tab:is([selected], [visually-selected], [multiselected]) .tab-close-button {
+	color: var(--ef-tab-text) !important;
+	fill: currentColor !important;
+}
+
+.tab-close-button {
+	background: transparent !important;
+	border: none !important;
+	border-radius: var(--ef-radius) !important;
+	box-shadow: none !important;
+}
+
+.tab-close-button:hover {
+	background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+#nav-bar toolbarbutton {
+	border-radius: var(--ef-radius) !important;
+	color: var(--ef-text) !important;
+}
+
+.bookmark-item .toolbarbutton-icon {
+	display: none !important;
+}
+
+#urlbar {
+	--urlbar-background-color: var(--ef-field) !important;
+	--urlbar-background-color-focus: var(--ef-field-focus) !important;
+	--urlbar-border-radius: var(--ef-radius) !important;
+	--urlbar-background-border-radius: var(--ef-radius) !important;
+	--urlbar-background-overhang-open: 0px !important;
+	--urlbar-input-growth-open-inline: 0px !important;
+	--urlbar-input-growth-open-block: 0px !important;
+
+	--urlbar-background-border: 1px solid var(--ef-border) !important;
+	--urlbar-background-border-focused: 1px solid var(--ef-accent) !important;
+	--urlbar-background-border-open: 1px solid var(--ef-border) !important;
+	--urlbar-background-outline-focused: none !important;
+	--urlbar-background-box-shadow-open: none !important;
+
+	--urlbar-input-container-outline-open: none !important;
+	--urlbar-input-container-outline-open-focused: none !important;
+
+	--toolbar-field-text-color: var(--ef-text) !important;
+	--toolbar-field-text-color-focus: var(--ef-text) !important;
+
+	background: transparent !important;
+	color: var(--ef-text) !important;
+	border-radius: var(--ef-radius) !important;
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+#urlbar > .urlbar-background {
+	position: absolute !important;
+	inset: 0 !important;
+	background: var(--ef-field) !important;
+	background-image: none !important;
+	border: 1px solid var(--ef-border) !important;
+	border-radius: var(--ef-radius) !important;
+	outline: none !important;
+	box-shadow: none !important;
+	clip-path: none !important;
+}
+
+#urlbar:is([focused], [open]) > .urlbar-background {
+	background: var(--ef-field-focus) !important;
+	border-radius: var(--ef-radius) !important;
+}
+
+#urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
+	border-color: var(--ef-accent) !important;
+	border-radius: var(--ef-radius) !important;
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+#urlbar[popover-open] > .urlbar-background {
+	inset: 0 !important;
+	background: var(--ef-field-focus) !important;
+	border-radius: var(--ef-radius) !important;
+	border-end-start-radius: var(--ef-radius) !important;
+	border-end-end-radius: var(--ef-radius) !important;
+	clip-path: none !important;
+	box-shadow: none !important;
+}
+
+#urlbar > .urlbar-input-container {
+	background: transparent !important;
+	border: none !important;
+	border-radius: var(--ef-radius) !important;
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+#urlbar[popover-open] > .urlbar-input-container {
+	margin: 0 !important;
+	border-radius: var(--ef-radius) !important;
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+#urlbar .urlbar-input {
+	color: var(--ef-text) !important;
+	caret-color: var(--ef-accent) !important;
+}
+
+#urlbar .urlbar-input::placeholder {
+	color: var(--ef-text-muted) !important;
+	opacity: 1 !important;
+}
+
+#urlbar .urlbarView {
+	display: none !important;
+}
+
+.urlbar-icon,
+#userContext-indicator,
+#userContext-label {
+	display: none !important;
+}
+
+#context-searchselect {
+	background-color: var(--ef-select) !important;
+}
+
+#context-selectall,
+#context-inspect-a11y,
+#context-sendlinktodevice,
+#context-bookmarklink,
+#context-print-selection,
+#context_sendTabToDevice,
+#context_reopenInContainer {
+	display: none !important;
+}
